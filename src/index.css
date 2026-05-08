@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #855300;
+  --color-primary-container: #f59e0b;
+  --color-on-primary-container: #613b00;
+  
+  --color-secondary: #544fc0;
+  --color-secondary-container: #8f8bff;
+  --color-on-secondary-container: #231791;
+  
+  --color-tertiary: #006c49;
+  --color-tertiary-container: #30c88f;
+  --color-on-tertiary-container: #004e34;
+  
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f4f5;
+  --color-surface-container: #edeeef;
+  --color-surface-container-high: #e7e8e9;
+  --color-surface-container-highest: #e1e3e4;
+  
+  --color-on-surface: #191c1d;
+  --color-on-surface-variant: #534434;
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-on-surface bg-[#f8f9fa];
+  }
+}
+
+.glass-panel {
+  @apply bg-white/60 backdrop-blur-xl border border-white/40 shadow-[0_4px_20px_rgba(84,79,192,0.06)];
+}
+
+.glass-card {
+  @apply bg-white/60 backdrop-blur-md border border-white/80 shadow-sm transition-all duration-300;
+}
